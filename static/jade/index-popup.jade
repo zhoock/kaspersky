@@ -1,0 +1,332 @@
+mixin user
+	a(href="#")
+		.b-bubble__wrapper
+			.b-bubble__text Marco van Overbeeke
+		span: img.userpic(src="/css/blocks/b-profile/kramina_userpic.jpg")
+mixin tr
+	tr
+		td= n
+		td: img.userpic(src="/css/blocks/b-profile/kramina_userpic.jpg")
+		td Dorian Boccolacci
+		td 5647
+		td 1.08.823
+		td Ticket at the GP belgian
+
+mixin end-race(num, txt)
+	li
+		span.num= num
+		span.txt= txt
+mixin results(num, txt)
+	li
+		span.txt= txt
+		span.num= num
+mixin tribune
+	.b-tribune__row.b-tribune__row--1
+		- var n = 1
+		while n < 9
+			+user
+			- n++
+	.b-tribune__row.b-tribune__row--2
+		- var n = 1
+		while n < 10
+			+user
+			- n++
+	.b-tribune__row.b-tribune__row--3
+		- var n = 1
+		while n < 11
+			+user
+			- n++
+	.b-tribune__row.b-tribune__row--4
+		- var n = 1
+		while n < 12
+			+user
+			- n++
+	.b-tribune__row.b-tribune__row--5
+		- var n = 1
+		while n < 13
+			+user
+			- n++
+	.b-tribune__row.b-tribune__row--6
+		- var n = 1
+		while n < 11
+			+user
+			- n++
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - главная"
+	include ../includes/_head
+	body(style="overflow-y:hidden;")
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+
+				.b-container
+
+					.row
+						.small-8.small-centered.columns
+							.b-user-profile
+								.small-12.medium-8.columns
+									.row
+										.small-3.columns
+											img.userpic(src="/css/blocks/b-profile/kramina_userpic.jpg")
+										.small-9.columns
+											hgroup
+												h1 Sébastien Bourdais
+												h2 Challenger (28-position)
+											a(href="#").settings
+												i.icon-cog
+												=" "
+												| Settings
+									.row
+										.small-12.columns
+											.b-current-result
+												h2 Current result
+													=" "
+													span (Abu Dhabi Grand Prix)
+												ul
+													+results("28", "Position")
+													+results("1.09.285", "Time")
+													+results("3852", "Points")
+													+results("20/20", "Answers")
+
+								.small-12.medium-4.columns
+									.b-user-profile__end-race
+										p Results to be announced in:
+										ul
+											+end-race("04", "Days")
+											+end-race("23", "Hours")
+											+end-race("18", "Min")
+											+end-race("56", "Sec")
+
+									.row
+										.small-12.columns
+											.b-share.js-trigger-share
+												p Let them envy! Sharing your result will add extra points, go for it.
+												a.btn.btn__profile.expand share my results
+
+												.b-social.js-social
+
+													ul
+														li: a(class="fb",data-shareTitle="Мои результаты заезда",data-shareImage="http://yastatic.net/morda-logo/i/logo.png",data-shareText="Current result (Abu Dhabi Grand Prix): position - 28, time - 1.09.285",data-shareLink="http://moto.kaspersky.ru").fb
+															i.icon-facebook
+														li: a(class="tw",data-shareTitle="Мои результаты заезда",data-shareImage="http://yastatic.net/morda-logo/i/logo.png",data-shareText="Current result (Abu Dhabi Grand Prix): position - 28, time - 1.09.285",data-shareLink="http://moto.kaspersky.ru").tw
+															i.icon-twitter
+														li: a(class="google",data-shareTitle="Мои результаты заезда",data-shareImage="http://yastatic.net/morda-logo/i/logo.png",data-shareText="Current result (Abu Dhabi Grand Prix): position - 28, time - 1.09.285",data-shareLink="http://moto.kaspersky.ru").google
+															i.icon-googleplus
+
+								.small-12.columns
+									.remind Don’t miss the next round!
+										=" "
+										span Get a reminder.
+		// /modal
+		// /modal
+
+		// container
+		.b-container.b-container--index
+			section.b-content(role="main")
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+				.row
+					.small-10.small-centered.columns.hide-for-medium-down
+						.svg
+							img(src="/css/blocks/b-index/track.png")
+				// Track
+				.row
+					.small-11.small-centered.medium-10.medium-centered.columns
+						.b-track
+							.row
+								.large-5.columns
+									.row
+										.small-7.medium-12.columns
+											h1
+												span It
+												=" "
+												| choice
+												br
+												| of Ferrari
+											p Win prizes & tickets to the Belgian Grand Prix!
+												br
+												| Take your seat at the real tribune with
+												br
+												| Kaspersky Motosport
+											a.btn.btn__start start
+											.b-date-race.hide-for-medium-down
+												p GT SERIES - TOTAL
+													br
+													| 24 HOURS OF SPA BELGIUM
+													span 23-25 Aug 2015
+								.large-7.columns
+									.b-tribune.hide-for-medium-down
+										+tribune
+							.small-12.columns.show-for-medium-down
+								.svg.medium
+									img(src="/css/blocks/b-index/track.png")
+							.small-12.columns
+								.b-date-race.show-for-medium-down.text-center
+									p GT SERIES - TOTAL
+										br
+										| 24 HOURS OF SPA BELGIUM
+										span 23-25 Aug 2015
+								.b-tribune.show-for-medium-down
+									+tribune
+				// /Track
+				// Scoreboard
+				.b-scoreboard
+					.row
+						.small-12.columns.small-collapse
+							.row
+								.medium-8.small-centered.columns
+									h1 Scoreboard
+									table.b-scoreboard__table
+										colgroup
+											col(span="2" width="6%")
+											col(span="1" width="22%")
+											col(span="3")
+										thead
+											tr
+												th R
+												th N
+												th Name
+												th Points
+												th Result
+												th Prize
+										tbody
+											- var n = 1
+											while n < 16
+												+tr
+												- n++
+									.text-center
+										a.btn.btn__profile see all results
+							.pattern
+				// /Scoreboard
+				// About
+				.row
+					.small-5.small-centered.columns
+						.b-about
+							h1 About
+							p Kaspersky Lab, an official sponsor of Scuderia Ferrari since 2010, welcomes you to the new exciting challenge. Sharing the same desire for excellence, maximum speed and best-in-class performance, together we give you a chance to take your place at real tribune and attend breath-taking racing.
+							p We believe, that knowledge is power. A power to strive harder, perform better and win every race. This power needs to be saved. That is why Kaspersky Lab provides Ferrari with full IT security and fights a high-tech battle against all potential threads. Kaspersky has tailored an endpoint solution that meets all Ferrari’s specific needs.
+							p Make your knowledge your power, your speed and your acceleration! Turn the information into the fuel. Get your own Kaspersky security to protect it, so that one day you will find yourself at the real racing tribune.
+				// /About
+				//Prizes
+				.b-prizes
+					.row
+						.small-12.columns.small-collapse
+							.row
+								.small-8.small-centered.columns.small-collapse
+									.text-center
+										i.icon-prizes
+										h1 Prizes
+									.row
+										.small-12.medium-4.columns
+											h2 For the
+												br
+												| fastest experts
+												br
+												| in racing
+										.small-6.medium-5.columns
+											.text-center
+												figure
+													img.VIP-one.js-VIP-one(src="/css/blocks/b-index/prize-1-1.png")
+													img.VIP-two.js-VIP-two(src="/css/blocks/b-index/prize-1-2.png")
+													figcaption
+														| VIP tickets with an opportunity
+														br
+														| to make photos with racers
+														br
+														| and cars
+										.small-6.medium-3.columns
+											.text-center
+												figure
+													img.ticket-one.js-ticket-one(src="/css/blocks/b-index/prize-2-1.png")
+													img.ticket-two.js-ticket-two(src="/css/blocks/b-index/prize-2-2.png")
+													figcaption
+														| Tickets to tribune
+									.row
+										.large-6.large-push-6.columns
+											h3 For every great performance in
+												| the competition
+										.large-6.large-pull-6.columns
+											.text-center
+												figure
+													img.portrait.js-portrait(src="/css/blocks/b-index/prize-3.png")
+													figcaption
+														| Racer's selfie with
+														br
+														| your printed portrait
+									.row
+										.small-4.large-offset-4.columns
+											.text-center
+												figure
+													img.cap.js-cap(src="/css/blocks/b-index/prize-4.png")
+													figcaption
+														| Souvenir with racer's
+														br
+														| autograph
+										.small-4.columns
+											.text-center
+												figure
+													img.autograph.js-autograph(src="/css/blocks/b-index/prize-5.png")
+													figcaption
+														| Caps, bags, umbrellas
+														br
+														| and towels
+				// /Prizes
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+			.b-container_footer
+		// /container
+		// footer
+		include ../includes/_footer
+		// /footer
+		script.
+			$(function () {
+
+				jqApp.touchMoveContolrs('disable');
+
+				var VIPTwo = $(".js-VIP-two"),
+								ticketOne = $(".js-ticket-one"),
+								portrait = $(".js-portrait"),
+								cap = $(".js-cap"),
+								autograph = $(".js-autograph");
+				VIPTwo.on("mouseenter", function () {
+					$(this).addClass("hinge animated").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
+						$(this).removeClass("hinge animated");
+					});
+				});
+				ticketOne.on("mouseenter", function () {
+					$(this).addClass("swing animated").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
+						$(this).removeClass("swing animated");
+					});
+				});
+				portrait.on("mouseenter", function () {
+					$(this).addClass("zoomIn animated").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
+						$(this).removeClass("zoomIn animated");
+					});
+				});
+				cap.on("mouseenter", function () {
+					$(this).addClass("bounceIn animated").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
+						$(this).removeClass("bounceIn animated");
+					});
+				});
+				autograph.on("mouseenter", function () {
+					$(this).addClass("rubberBand animated").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
+						$(this).removeClass("rubberBand animated");
+					});
+				});
+			});

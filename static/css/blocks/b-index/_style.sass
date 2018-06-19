@@ -1,0 +1,1095 @@
+// Index
+//
+//
+
+section.b-content
+    +rhythm-padding(10, 0)
+
+.b-container--index
+    background: transparent url(/css/blocks/b-index/index-bg-top.jpg) repeat-y
+
+    .svg
+
+        +breakpoint(1024)
+            position: inherit
+            top: 0
+
+    .b-track
+
+        .btn__start
+            +animation(btn_start 1.5s linear infinite)
+            +transition(all .4s cubic-bezier(0.860, 0.000, 0.245, 1.385))
+
+        h1
+            +adjust-font-size-to(4.8rem)
+            color: #ee2127
+            text-transform: uppercase
+            font-weight: 800
+            +rhythm-margins(7, 0)
+
+            +breakpoint(1024)
+                margin-top: 40px
+            .h_row
+                display: block
+                span
+                    font-weight: 400
+
+            span span
+                font-weight: 400
+
+            & + p
+                +rhythm-margins(0, 3)
+
+        p
+            +adjust-font-size-to(1.6rem)
+            color: #1b0000
+            +rhythm-margins(2, 4)
+
+        .b-date-race-wrap
+            position: relative
+            .b-date-race
+                position: absolute
+                left: 210px
+                top: -1px
+                white-space: nowrap
+                p
+                    margin: 0
+
+        .b-date-race
+            p
+                color: #2a161a
+                +adjust-font-size-to(1.6rem)
+                text-transform: uppercase
+                font-weight: 800
+
+                span.date
+                    color: $link
+                span
+                    display: block
+
+        .b-tribune
+            background: transparent url(/css/blocks/b-index/index-tribune.svg) no-repeat
+            background-size: contain
+            text-align: center
+            //padding: 17.5% 0 66px
+            padding: 14% 0 8%
+
+            &--small
+                background: transparent url(/css/blocks/b-index/index-tribune-small.svg) 50% no-repeat
+                background-size: contain
+                width: 100%
+                position: relative
+
+                +breakpoint(1280)
+                    +translateY(50%)
+
+                +breakpoint(1024)
+                    +translateY(0)
+
+                .b-tribune__row
+                    position: relative
+
+                    +tribune-row-1(2%, -4%, 0)
+                    //+tribune-row-2(1.7%, -1%, -1px)
+                    //+tribune-row-3(2%, -.5%, -20px)
+                    +tribune-row-2(1.7%, -1%, 0)
+                    +tribune-row-3(2%, -.5%, 50%)
+
+            &__row
+                margin-left: .3%
+                //+tribune-row(2%)
+                //+tribune-rows(2.1%, 0, 0)
+
+                +breakpoint(1280)
+                    margin-top: -.2%
+
+                +breakpoint(1024)
+                    margin-top: 0
+
+                a, a:link
+                    width: 5%
+                    display: inline-block
+                    position: relative
+                    cursor: default
+
+                    &.userpic
+                        cursor: default
+
+                        &:hover
+                            img
+                                +box-shadow(0px 0px 0px 2px $yellow)
+                                position: relative
+                                top: -4px
+
+                            .b-bubble__wrapper
+                                visibility: visible
+                                +opacity(1)
+                                top: -44px
+
+                    .b-bubble__wrapper
+                        visibility: hidden
+                        +opacity(0)
+                        position: absolute
+                        left: 50%
+                        top: 0
+                        height: 27px
+                        background: $yellow
+                        +translate(-50%, 0)
+                        +transition(all .4s)
+
+                        &::after
+                            content: ""
+                            position: absolute
+                            bottom: -8px
+                            left: 50%
+                            +translate(-50%, 0)
+                            width: 0
+                            height: 0
+                            border-left: transparent 8px solid
+                            border-right: transparent 8px solid
+                            border-top: $yellow 8px solid !important
+
+                        .b-bubble__text
+                            white-space: nowrap
+                            color: #1b0000
+                            background: $yellow
+                            text-align: center
+                            padding: 0 10px
+                            font-weight: 600
+
+                &:last-of-type
+                    //margin-top: 3%
+
+                    +breakpoint(1280)
+                    //margin-top: 2%
+
+                    +breakpoint(1024)
+            //margin-top: 2.7%
+    .svg
+        position: relative
+        width: 100%
+        top: 40px
+
+    .b-scoreboard
+        background: transparent url(/css/blocks/b-scoreboard/bg-scoreboard.jpg) no-repeat
+        background-size: cover
+
+        h1
+            font-weight: 800
+            +margin-leader(2)
+
+        a
+            +rhythm-margins(4, 8)
+
+    .b-about
+        text-align: center
+        +padding-trailer(4)
+
+        h1
+            +adjust-font-size-to(2.6rem)
+            +rhythm-margins(6, 2)
+            font-weight: 800
+            text-transform: uppercase
+            color: $link
+
+        p
+            +adjust-font-size-to(1.5rem)
+            color: black
+
+    .b-prizes
+        background: url(/css/blocks/b-index/index-bg-prizes.jpg)
+        position: relative
+        padding-bottom: 150px
+
+        .icon-prizes
+            color: $yellow
+            +adjust-font-size-to(8rem)
+            +margin-leader(4)
+            display: inline-block
+
+        h1
+            color: white
+            font-weight: 800
+            text-transform: uppercase
+            +adjust-font-size-to(2.6rem)
+            +trailer(6)
+
+        h2
+            +adjust-font-size-to(3.8rem)
+            font-weight: 800
+            text-transform: uppercase
+            white-space: nowrap
+            +rhythm-margins(2, 3)
+
+        h3
+            color: white
+            font-weight: 800
+            text-transform: uppercase
+            +adjust-font-size-to(2.4rem)
+            +rhythm-margins(6, 2)
+
+        figure
+            +rhythm-margins(2, 2)
+            position: relative
+            padding-bottom: 70px
+
+            .wrapperVip
+                height: 290px
+                display: block
+
+                .VIP-one
+                    position: absolute
+                    top: 88px
+                    left: 50%
+                    +translateX(-50%)
+
+                .VIP-two
+                    position: absolute
+                    top: 0
+                    left: 50%
+                    +translateX(-50%)
+
+            .ticket-one
+                position: absolute
+
+            figcaption
+                color: $yellow
+                +adjust-font-size-to(1.3rem)
+                +margin-leader(2)
+                font-weight: 800
+                text-transform: uppercase
+                letter-spacing: 1px
+                bottom: 0
+
+.b-small-flags
+    position: absolute
+    left: 50%
+    bottom: 70px
+    +translateX(-50%)
+
+.b-push-block
+    height: 120px
+
+.maploader
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: #171E28
+    z-index: 1000
+    overflow: hidden
+    +background-image(radial-gradient(center, ellipse cover, rgba(45, 51, 60, 1) 0%, rgba(24, 31, 40, 1) 100%))
+    background-position: center center
+    background-size: cover
+    +perspective(600px)
+
+    canvas
+        position: absolute
+        left: 50%
+        top: 50%
+        +translate(-50%, -50%)
+        max-width: 100%
+        max-height: 100%
+
+    .spin
+        background: url($preloader) 0 0 no-repeat
+        width: 152px
+        height: 152px
+        position: absolute
+        left: 50%
+        top: 50%
+        margin: -76px 0 0 -76px
+        +animation(spinner 1100ms linear infinite)
+        display: block
+        opacity: 0.4
+    &:after
+        content: ""
+        background: url(/css/blocks/b-index/loader_005_5_shadow_layer.svg) left top no-repeat
+        background-size: cover
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 99
+    .maploader_wrap
+        position: absolute
+        width: 100%
+        height: 100%
+        &.animated
+            +transition(all 1.4s)
+            +transform(rotateX(30deg))
+    #maploader
+        position: absolute
+        width: 100%
+        height: 100%
+        svg
+            position: absolute
+            left: 50% !important
+            top: 50% !important
+            +translate(-50%, -50%)
+
+.pin_winners
+    padding: 0 0 10% 45px
+    font-size: 13px
+    text-transform: uppercase
+    position: absolute
+    z-index: 9999999
+    right: 16%
+    bottom: 75%
+    cursor: pointer
+    +transition(all 1.4s)
+    &.hidden_pin
+        opacity: 0
+    +breakpoint(1024)
+        &.hidden_pin
+            opacity: 1
+    span
+        position: relative
+        top: 0
+        white-space: nowrap
+        +transition(all .7s cubic-bezier(0.860, 0.000, 0.245, 1.385))
+    &:before
+        content: "+"
+        background: #318A67
+        width: 36px
+        height: 36px
+        border-radius: 36px
+        display: block
+        position: absolute
+        left: 0
+        top: -4px
+        color: #ffffff
+        text-align: center
+        font-size: 30px
+        line-height: 32px
+        z-index: 2
+        +transition(all .7s cubic-bezier(0.860, 0.000, 0.245, 1.385))
+        opacity: 1
+        +animation(pinwin 1.5s ease-in infinite)
+    &:after
+        content: ""
+        position: absolute
+        height: 100%
+        bottom: 0
+        left: 18px
+        background: #318A67
+        width: 1px
+        z-index: 1s
+        +transition(all .4s)
+        cursor: default
+        pointer-events: none
+
+.mainpage
+    &.scrolldisabled
+        overflow: hidden
+    header
+        top: -63px
+        +transition(all 0.4s cubic-bezier(0.860, 0.000, 0.245, 1.385))
+    .pin_winners
+        span
+            top: -800px
+        &:before
+            opacity: 0
+        &:after
+            height: 0
+    .b-container--index
+        .b-track
+            h1
+                .h_row
+                    position: relative
+                    +transition(all 1.4s cubic-bezier(0.860, 0.000, 0.245, 1.385))
+                    &.h_row_t
+                        top: -400px
+                        opacity: 0
+                    &.h_row_b
+                        left: -450px
+                        opacity: 0
+
+            .d_row
+                display: block
+            .b-date-race, p
+                i
+                    opacity: 0
+                    font-style: normal
+            .btn__start
+                position: relative
+                left: -350px
+                opacity: 0
+                &.btn_animated
+                    left: 0
+                    opacity: 1
+            .b-tribune-wrap
+                display: none
+
+        .svg
+            position: relative
+            width: 100%
+            +transition(all 2s cubic-bezier(0.860, 0.000, 0.245, 1.385))
+            &.tophide
+                top: -1560px
+
+    &.heading_anim
+        header
+            top: 0
+        .b-container--index
+            .b-track
+                h1
+                    .h_row
+                        &.h_row_t
+                            top: 0
+                            opacity: 1
+                        &.h_row_b
+                            left: 0
+                            opacity: 1
+    &.map_anim
+        .svg
+            &.tophide
+                top: 0
+                width: 100%
+                z-index: 0
+                max-width: 1193px
+                margin-bottom: 40px
+
+    &.pin_animation
+        .pin_winners
+            span
+                top: 0
+            &:before
+                opacity: 1
+            &:after
+                height: 100%
+
++keyframes(btn_start)
+    0%
+        background-color: #EE2127
+        +transform(scale(0.96))
+    50%
+        background-color: #FC5234
+        +transform(scale(1))
+    100%
+        background-color: #EE2127
+        +transform(scale(0.96))
+
++keyframes(pinwin)
+    0%
+        background-color: #318A67
+        +transform(scale(0.96))
+    50%
+        background-color: #44b287
+        +transform(scale(1))
+    100%
+        background-color: #318A67
+        +transform(scale(0.96))
+
+.disable-hover, .disable-hover *
+    pointer-events: none
+
+.oldOpera
+    .b-tribune
+        background: transparent url(/css/blocks/b-index/index-tribune.png) no-repeat !important
+        background-size: contain !important
+
+    .pattern
+        background: url(/images/finishline_puttern_yellow.png) 0 0 repeat-x !important
+
+        &--black
+            background: transparent url(/images/finishline_puttern_black.png) 0 0 repeat-x !important
+
+        &--white
+            background: url(/images/finishline_puttern_white.png) 0 0 repeat-x !important
+
+#track_holder
+    line-height: 0
+    font-size: 0
+    position: relative
+    z-index: 11
+
+.track_bg
+    background: url(/css/blocks/b-index/cars/monza/track_ground.png) 0 0 no-repeat
+    position: absolute
+    z-index: 8
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-size: 100% auto
+
+.track_trees
+    background: url(/css/blocks/b-index/cars/monza/track_trees.png) 0 0 no-repeat
+    position: absolute
+    z-index: 10
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-size: 100% auto
+
+%sprite
+    background-repeat: no-repeat
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 9
+    margin: -40px 0 0 -40px
+
+.sprite-car-red
+    background-image: url(/css/blocks/b-index/cars/monza/red/sprite.png)
+
+.sprite-car-white
+    background-image: url(/css/blocks/b-index/cars/monza/white/sprite.png)
+
+.sprite-car-green
+    background-image: url(/css/blocks/b-index/cars/monza/green/sprite.png)
+
+.sprite-car0
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 0
+
+.sprite-car1
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -80px 0
+
+.sprite-car10
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -160px 0
+
+.sprite-car11
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -240px 0
+
+.sprite-car12
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -320px 0
+
+.sprite-car13
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -400px 0
+
+.sprite-car14
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -480px 0
+
+.sprite-car15
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -560px 0
+
+.sprite-car16
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -640px 0
+
+.sprite-car17
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 -80px
+
+.sprite-car18
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -80px -80px
+
+.sprite-car19
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -160px -80px
+
+.sprite-car2
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -240px -80px
+
+.sprite-car20
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -320px -80px
+
+.sprite-car21
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -400px -80px
+
+.sprite-car22
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -480px -80px
+
+.sprite-car23
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -560px -80px
+
+.sprite-car24
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -640px -80px
+
+.sprite-car25
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 -160px
+
+.sprite-car26
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -80px -160px
+
+.sprite-car27
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -160px -160px
+
+.sprite-car28
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -240px -160px
+
+.sprite-car29
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -320px -160px
+
+.sprite-car3
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -400px -160px
+
+.sprite-car30
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -480px -160px
+
+.sprite-car31
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -560px -160px
+
+.sprite-car32
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -640px -160px
+
+.sprite-car33
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 -240px
+
+.sprite-car34
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -80px -240px
+
+.sprite-car35
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -160px -240px
+
+.sprite-car36
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -240px -240px
+
+.sprite-car37
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -320px -240px
+
+.sprite-car38
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -400px -240px
+
+.sprite-car39
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -480px -240px
+
+.sprite-car4
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -560px -240px
+
+.sprite-car40
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -640px -240px
+
+.sprite-car41
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 -320px
+
+.sprite-car42
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -80px -320px
+
+.sprite-car43
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -160px -320px
+
+.sprite-car44
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -240px -320px
+
+.sprite-car45
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -320px -320px
+
+.sprite-car46
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -400px -320px
+
+.sprite-car47
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -480px -320px
+
+.sprite-car48
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -560px -320px
+
+.sprite-car49
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -640px -320px
+
+.sprite-car5
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 -400px
+
+.sprite-car50
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -80px -400px
+
+.sprite-car51
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -160px -400px
+
+.sprite-car52
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -240px -400px
+
+.sprite-car53
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -320px -400px
+
+.sprite-car54
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -400px -400px
+
+.sprite-car55
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -480px -400px
+
+.sprite-car56
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -560px -400px
+
+.sprite-car57
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -640px -400px
+
+.sprite-car58
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 -480px
+
+.sprite-car59
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -80px -480px
+
+.sprite-car6
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -160px -480px
+
+.sprite-car60
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -240px -480px
+
+.sprite-car61
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -320px -480px
+
+.sprite-car62
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -400px -480px
+
+.sprite-car63
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -480px -480px
+
+.sprite-car64
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -560px -480px
+
+.sprite-car65
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -640px -480px
+
+.sprite-car66
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 -560px
+
+.sprite-car67
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -80px -560px
+
+.sprite-car68
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -160px -560px
+
+.sprite-car69
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -240px -560px
+
+.sprite-car7
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -320px -560px
+
+.sprite-car70
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -400px -560px
+
+.sprite-car71
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -480px -560px
+
+.sprite-car72
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -560px -560px
+
+.sprite-car73
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -640px -560px
+
+.sprite-car74
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 -640px
+
+.sprite-car75
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -80px -640px
+
+.sprite-car76
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -160px -640px
+
+.sprite-car77
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -240px -640px
+
+.sprite-car78
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -320px -640px
+
+.sprite-car79
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -400px -640px
+
+.sprite-car8
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -480px -640px
+
+.sprite-car80
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -560px -640px
+
+.sprite-car81
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -640px -640px
+
+.sprite-car82
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -720px 0
+
+.sprite-car83
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -720px -80px
+
+.sprite-car84
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -720px -160px
+
+.sprite-car85
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -720px -240px
+
+.sprite-car86
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -720px -320px
+
+.sprite-car87
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -720px -400px
+
+.sprite-car88
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -720px -480px
+
+.sprite-car89
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -720px -560px
+
+.sprite-car9
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: -720px -640px
+
+.sprite-car90
+    width: 80px
+    height: 80px
+    @extend %sprite
+    background-position: 0 -720px
+
+.autograph
+    position: relative
+

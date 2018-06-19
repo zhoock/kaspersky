@@ -1,0 +1,96 @@
+// Header
+//
+//
+
+header
+    height: 63px
+    background-color: white
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    z-index: 9999
+
+    .logo
+        height: 63px
+        padding: 20px 0 0 30px
+        display: inline-block
+
+    nav
+
+        height: 63px
+
+        ul
+            margin: 0
+            padding: 12px 0 0
+            height: 100%
+            text-align: justify
+
+            +breakpoint(1024)
+                padding-top: 22px
+
+            a
+                +breakpoint(1024)
+                    font-size: 0 !important
+
+            &::after
+                content: ""
+                width: 100%
+                height: 0
+                visibility: hidden
+                display: inline-block
+
+            li
+                display: inline-block
+                text-align: center
+
+                a
+                    text-transform: capitalize
+                    font-size: 1.4rem
+                    display: inline-block
+
+                i
+                    display: block
+                    color: $yellow
+                    font-size: 2.4rem
+                    +transition(color .25s)
+
+                    &:hover
+                        color: mix($yellow, white, 50%)
+
+    .b-account
+        float: right
+        +pie-clearfix
+        height: 63px
+
+        ul
+            +pie-clearfix
+            margin: 0
+            height: 100%
+
+            li
+                float: left
+                height: 100%
+                line-height: 62px
+
+                a
+                    font-size: 1.5rem
+                    padding: 0 15px
+                    display: block
+                    min-width: 135px
+                    max-width: 135px
+                    text-align: center
+                    white-space: nowrap
+                    overflow: hidden
+                    text-overflow: ellipsis
+
+                    &:hover, &.active
+                        background-color: $yellow
+                        color: black
+
+                    img
+                        width: 25px
+                        margin-right: 10px
+
+
+

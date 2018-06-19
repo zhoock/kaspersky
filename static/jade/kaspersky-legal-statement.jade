@@ -1,0 +1,126 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - юридическое реквизиты"
+	include ../includes/_head
+
+	body
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-11.small-centered.medium-10.large-8.columns
+							.b-legal-statement
+								.row
+									.small-12.columns
+										.text-center
+											h1 Legal Statement
+
+										.b-legal-statement__text
+
+											p Registered details about the publisher of this website
+
+											.row.collapse
+												.small-12.columns
+													.row.collapse
+														.small-4.medium-6.columns
+															span Legal address:
+														.small-8.medium-6.columns
+															span Kaspersky Lab HQ
+																br
+																| 39A/3 Leningradskoye Shosse
+																br
+																| Moscow, 125212
+																br
+																| Russian Federation
+											br
+
+											.row.collapse
+												.small-12.columns
+													.row.collapse
+														.small-4.medium-6.columns
+															span Physical address:
+														.small-8.medium-6.columns
+															span Kaspersky Lab HQ
+																br
+																| 39A/3 Leningradskoye Shosse
+																br
+																| Moscow, 125212
+																br
+																| Russian Federation
+											br
+
+											.row.collapse
+												.small-12.columns
+													.row.collapse
+														.small-4.medium-6.columns
+															span General Manager:
+																br
+																| VAT (INN) – number:
+																br
+																| Incorporation type:
+																br
+																| Place of incorporation:
+																br
+																| Incorporation number:
+																br
+																| Email:
+																br
+																| Telephone:
+																br
+																| Fax:
+
+														.small-8.medium-6.columns
+															span Eugene Kaspersky
+																br
+																| 7713140469
+																br
+																| ZAO (Russian Closed Joint-Stock Company)
+																br
+																| Moscow Registration Chamber
+																br
+																| 1027739867473
+																br
+																| info@kaspersky.com
+																br
+																| +7-495-797-8700
+																br
+																| +7-495-797-8709
+											br
+
+											p For contact details, please see our
+												=" "
+												span.blockquote.blockquote--normal Contact page
+
+
+				// modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer

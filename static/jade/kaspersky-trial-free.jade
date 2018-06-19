@@ -1,0 +1,71 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - пробная бесплатная версия"
+	include ../includes/_head
+
+	body
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-11.small-centered.medium-10.large-8.columns
+							.b-trial-free
+								h1
+									span free trial version of
+									|	kaspersky internet security
+									br
+									| for all devices
+
+								h2 To START our competition your gadget should be protected!
+									br
+									| Install FOR FREE one of our PREMIUM security product
+
+								ul.b-list-platforms
+									li: a(href="http://trial.kaspersky-labs.com/trial/registered/uo94t3p72dytpk441sl3/kismac15_0_1_378mlg_da_de_en_es_es-es_fi_fr_it_nb_nl_pl_pt_pt-pt_ru_sv_tr_myk.dmg").icon-finder_yosemite_black.active
+									li: a(href="https://itunes.apple.com/app/apple-store/id723879672?pt=568957&ct=socmedferrari&mt=8").icon-ios
+									li: a(href="http://app.appsflyer.com/com.kms.free?pid=smm&c=socmedferrari").icon-android
+									li: a(href="https://kas.pr/7952").icon-windows
+								.row
+									.small-6.columns
+										a.btn.btn__profile.expand
+											i.icon-download
+											| try for free & start the test
+
+									.small-6.columns
+										p.insruction
+											| Automate download Kaspersky Internet Security for your device. Next, you will be moved to the beginning of the test, where it will be necessary to answer the questions at the best time.
+		// /modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer
+
+

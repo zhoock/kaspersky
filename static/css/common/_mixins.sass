@@ -1,0 +1,110 @@
+// Buttons
+//
+//
+
+=button-variant($color, $background, $hover-background, $disabled-background: $yellow, $border: transparent)
+    color: $color
+    background-color: $background
+    border: 1px solid $border
+
+    &:hover,
+    &:focus,
+    &:active
+        color: $color
+        background-color: $hover-background
+        +background-image($hover-background)
+
+    &.disabled,
+    &[disabled]
+        &:hover,
+        &:focus,
+        &:active
+            background-color: $disabled-background
+
+=breakpoint($point)
+    @if $point == 1280
+        @media (max-width: #{1280px})
+            @content
+
+    @if $point == 1410/768
+        @media (min-width: #{768px}) and (max-width: #{1410px})
+            @content
+
+    @if $point == 1024
+        @media (max-width: #{1024px})
+            @content
+
+    @if $point == 1000
+        @media (max-width: #{1000px})
+            @content
+
+    @if $point == 768
+        @media (max-width: #{768px})
+            @content
+
+    @if $point == 480
+        @media (max-width: #{480px})
+            @content
+
+    @if $point == 320
+        @media (max-width: #{320px})
+            @content
+
+    @if $point == 960
+        @media (min-width: #{960px})
+            @content
+
+//$list-row: b-tribune__row--1
+//
+//=tribune-row($margin-right)
+//    @each $row in $list-row
+//        &.#{$row}
+//            a
+//                &:not(:last-of-type)
+//                    margin-right: $margin-right
+//
+//$list-rows: b-tribune__row--2 b-tribune__row--3 b-tribune__row--4 b-tribune__row--5 b-tribune__row--6
+//
+//=tribune-rows($margin-right, $x:0)
+//    @each $row in $list-rows
+//        &.#{$row}
+//            a
+//                &:not(:last-of-type)
+//                    margin-right: $margin-right
+                    //margin-right: $margin-right + $x
+//        $x: $x + 1
+
+$list-row: b-tribune__row--1
+
+=tribune-row-1($margin-right, $left, $bottom)
+    @each $row in $list-row
+        &.#{$row}
+            left: $left
+            bottom: $bottom
+            a
+                &:not(:last-of-type)
+                    margin-right: $margin-right
+
+$list-row-2: b-tribune__row--2
+
+=tribune-row-2($margin-right, $left, $bottom)
+    @each $row in $list-row-2
+        &.#{$row}
+            left: $left
+            bottom: $bottom
+            a
+                &:not(:last-of-type)
+                    margin-right: $margin-right
+
+$list-row-3: b-tribune__row--3
+
+=tribune-row-3($margin-right, $left, $bottom)
+    @each $row in $list-row-3
+        &.#{$row}
+            left: $left
+            +translateY($bottom)
+            a
+                &:not(:last-of-type)
+                    margin-right: $margin-right
+
+

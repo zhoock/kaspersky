@@ -1,0 +1,52 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - тест загрузчик"
+	include ../includes/_head
+
+	body
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+
+				.b-container
+
+					.b-test-attention-loading
+						.step.step_3 3
+						.step.step_2 2
+						.step.step_1 1
+						.step.step_go GO!
+		// /modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+
+
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer

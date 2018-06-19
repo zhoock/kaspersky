@@ -1,0 +1,73 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - тест правило"
+	include ../includes/_head
+
+	body
+		include ../includes/_header
+
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-11.small-centered.medium-10.large-8.columns
+							.b-test-rules
+								.row
+									.small-12.columns
+										.text-left
+											h1 Contest rules
+
+										.b-test-rules__text.js-test-rules__text
+											p The contest is held from Jule 1 to August 20, 2015. Organizers of the contest - the company Kaspersky Lab and Scuderia Ferrari. The main prize for the winner will be fifty tickets to the Formula 1 race in Belgian, August 23, 2015.
+											p Participants ranked in the top ten will also receive prizes, which will be announced later.
+											p The competition participants will have to answer the five questions posed based on the next release of the site kasperskymotorsports.com, and guess the starting and finishing positions of pilots of the team Scuderia Ferari, using fuels Total. This prediction on the outcome of the next stage will be considered only if the participant correctly answered all five questions of competition.
+											p If the pilot finished in the position specified in the forecast - the participant receives 25 points, if you made a mistake at one place - 18 points, for two - 15 points, three - 12 points, four - 10 points, five - 8 points six - 6 points, seven - 4 points, eight - 2 points and nine - 1 point. Points are added together.
+											p The contest will continue throughout the eight rounds of the championship Formula 1 - since the Spanish Grand Prix and ending with the Grand Prix of Italy. But in determining the winner of the contest takes into account only the results of the three best predictions - even if you join the competition in three Grand Prix before the end, you have a chance to win the grand prize.
+											p In case of equality of points for the three best prognosis, preference is given to who has the most points at the end of the entire contest.
+											p Voting at each stage ends at the start of qualifying, but earlier this forecast can not be changed. The results are fed immediately after the race finish. If after that the pilot will be disqualified or otherwise change the official position of the protocol, the competition he keeps his place.
+											p The contest is open to all upon registration. You entered "Name", "Password" and «E-mail» identify you as a participant. You can use your created earlier F1News.Ru account for contests and surveys.
+											p Participation in the contest implies that you understand and accept its rules. The organizers do not accept the claim by the participants about the scoring system and the forecast errors as you type. Payment of monetary equivalent of the value of the prizes is awarded is not performed.
+										input#option1(type="checkbox", name="agreement")
+										label.agreement(for="option1") I agree, and confirm that I am over 18 years
+
+										a.btn.btn__profile.disabled apply
+		// /modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer
+
+
+
+
+
+

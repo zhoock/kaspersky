@@ -1,0 +1,52 @@
+//- pages.jade
+mixin link(href, name)
+	div
+		| #{name} -
+		=" "
+		a(href=href + ".html", target="_blank") #{href + ".html"}
+
+
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - список страниц"
+
+	body
+		h3: b Главная
+		+link("index","Index")
+		+link("index-popup","Index Popup")
+		+link("index-map","Index map loading")
+
+
+		h3: b Профайл:
+		+link("kaspersky-profile","Kaspersky Profile")
+		+link("kaspersky-profile-without-photo","Kaspersky Profile Without Photo")
+		+link("kaspersky-profile-without-results","Kaspersky Profile Without Results")
+		+link("kaspersky-profile-settings","Kaspersky Profile Settings")
+
+		h3: b Табло с результатами тестов:
+		+link("kaspersky-scoreboard","Kaspersky Scoreboard")
+
+		h3: b Регистрация пользователя:
+		+link("kaspersky-registration","Kaspersky Registration")
+		+link("kaspersky-registration-error","Kaspersky Registration Error")
+		+link("kaspersky-registration-preload","Kaspersky Registration Preload")
+		+link("kaspersky-registration-confirmed","Kaspersky Registration Confirmed")
+		+link("kaspersky-restore-password","kaspersky Restore Password")
+		+link("kaspersky-registration-mail","kaspersky Registration Mail")
+
+		h3: b Тест:
+		+link("kaspersky-test-rules","kaspersky Test Rules")
+		+link("kaspersky-trial-free","kaspersky Trial Free")
+		+link("kaspersky-test-attention","kaspersky Test Attention")
+		+link("kaspersky-test-attention-load","kaspersky Test Attention Load")
+		+link("kaspersky-test","kaspersky Test")
+		+link("kaspersky-test-congratulation","kaspersky Test Congratulation")
+		+link("kaspersky-test-fail","kaspersky Test Fail")
+
+		h3: b Текстовые страницы
+		+link("kaspersky-contest-rules","kaspersky Contest Rules")
+		+link("kaspersky-legal-statement","kaspersky Legal Statement")
+		+link("kaspersky-privacy-policy","kaspersky Privacy Policy")
+		+link("kaspersky-contacts","kaspersky Contacts")
+
+

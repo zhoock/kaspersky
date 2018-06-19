@@ -1,0 +1,85 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - провал"
+	include ../includes/_head
+	body
+		include ../includes/_header
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-11.small-centered.medium-10.large-8.columns
+							.b-congratulation
+								.pattern.top
+								.row
+									.medium-12.large-6.columns
+										.b-congratulation__prizes
+											img.icon-flags(src="/css/blocks/b-index/flags.svg")
+											h1 Easy, tiger!
+											p You have had your chance. Just wait for the results now. Hope to see you on the tribune, fingers crossed!
+										.b-social
+											ul
+												li: a(href="#").fb
+													i.icon-facebook
+												li: a(href="#").tw
+													i.icon-twitter
+												li: a(href="#").google
+													i.icon-googleplus
+
+									.medium-12.large-5.columns
+										.b-test__current-time
+											.name Current time
+											.counter 00:00.36.937
+										.row
+											.small-6.columns.collapse
+												.b-test__current-points
+													.name Points:
+													.num 2281
+											.small-6.columns
+												.b-test__current-position
+													.name Position:
+													.num DNF
+										.row
+											.small-6.columns.collapse
+												.b-test__current-questions
+													.name Questions:
+													.num
+														span.green 7
+														=" "
+														| / 20
+											.small-6.columns
+												.b-test__error
+													.name Errors:
+													.num.red 1
+										.b-test__track
+											figure
+												img(src="/css/blocks/b-test/track.png")
+												figcaption Belgium Grand Prix
+								.pattern
+							p.info You need to correctly answer 20 questions at a better time.
+		// /modal
+		// container
+		.b-container
+			section.b-content(role="main")
+				.b-menu-section.hide-for-large-up
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+			.b-container_footer
+		// /container
+		// footer
+		include ../includes/_footer
+		// /footer
+

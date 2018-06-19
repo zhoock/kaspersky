@@ -1,0 +1,50 @@
+// Modal
+//
+//
+
+.b-modal
+
+    &__overlay
+        background: $body-bg url(/css/blocks/b-profile/content-bg.jpg) no-repeat
+        background-size: 100% auto
+        overflow-x: hidden
+        overflow-y: auto
+        bottom: 0
+        left: 0
+        position: fixed
+        +rhythm-padding(7, 4)
+        right: 0
+        top: 63px
+        z-index: -800
+        +opacity(0)
+        +scale(.5)
+        +transition(all .75s cubic-bezier(0.68, -0.55, 0.265, 1.55))
+        -webkit-overflow-scrolling: touch
+
+        & > *
+            -webkit-transform: translateZ(0px)
+
+
+        //open modal
+        &.open
+            z-index: 9990
+            +opacity(1)
+            +scale(1)
+            +transition(all .70s cubic-bezier(0.68, -0.55, 0.265, 1.55))
+
+        .b-container
+            margin-bottom: 0
+
+.icon-close
+    position: fixed
+    right: 28px
+    top: 90px
+    font-size: 2.2rem
+    color: #b2b2b2
+    cursor: pointer
+    +transition(color .25s)
+    z-index: 9999
+
+    &:hover
+        color: mix(#b2b2b2, white, 50%)
+

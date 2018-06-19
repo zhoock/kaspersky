@@ -1,0 +1,17 @@
+//- includes/_footer
+
+footer(role="contentinfo")
+	.b-container
+		.row
+			.small-12.medium-4.columns
+				.b-copyright.text-center &copy; 2015, Kaspersky Motosports.
+
+			.small-12.medium-7.columns
+				nav
+					ul
+						each val in ["legal statement", "privacy policy", "contact us", "kaspersky Lab"]
+							li: a(href="#")= val
+
+script(src='/js/engine.js')
+
+

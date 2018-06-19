@@ -1,0 +1,110 @@
+mixin tr
+	tr.hover
+		td
+			.panel
+				.front= n
+				.back= n
+		td
+			.panel
+				.front: img.userpic(src="/css/blocks/b-profile/kramina_userpic.jpg")
+				.back: img.userpic(src="/css/blocks/b-profile/kramina_userpic.jpg")
+		td
+			.panel
+				.front Dorian Boccolacci
+				.back Dorian Boccolacci
+		td
+			.panel
+				.front 5647
+				.back 5647
+		td
+			.panel
+				.front 1.08.823
+				.back 1.08.823
+		td
+			.panel
+				.front Ticket to Belgian GP
+				.back Ticket to Belgian GP
+
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - табло"
+	include ../includes/_head
+
+	body
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-11.small-centered.medium-10.large-8.columns
+							.b-scoreboard
+								h1 Scoreboard
+
+								table.b-scoreboard__table
+									colgroup
+										col(span="2" width="6%")
+										col(span="1" width="26%")
+										col(span="3")
+									thead
+										tr
+											th R
+											th N
+											th Name
+											th Points
+											th Result
+											th Prize
+									tbody
+										- var n = 1
+										while n < 151
+											+tr
+											- n++
+										tr
+											- var n = 0
+											while n < 6
+												td &#8230;
+												- n++
+
+										- var n = 184
+										+tr
+		// modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+				a.btn.btn__profile.js-trigger-modal view all results
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer
+
+
+
+
+
+
+
+

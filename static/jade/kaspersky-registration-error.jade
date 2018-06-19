@@ -1,0 +1,114 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - ошибка формы"
+	include ../includes/_head
+
+	body(data-page="registration")
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-12.columns
+							.b-enter
+								ul.b-enter__nav.js-enter__nav
+									li: a(data-toggle=".b-registration") registration
+									li: a(data-toggle=".b-login") login
+
+								.b-social
+									.gray Using the account in the social. Networks
+									ul
+										li: a(href="#").fb
+											i.icon-facebook
+										li: a(href="#").tw
+											i.icon-twitter
+										li: a(href="#").google
+											i.icon-googleplus
+
+									span.gray or
+
+								.b-enter__forms.js-wrapper-forms
+									form.b-registration
+										div.wrapper-input
+											label(for="name") Name
+											input#name(type="text", placeholder="Your Name", value="Quentin")
+
+										div.wrapper-input
+											label(for="name") Surname
+											input#name(type="text", placeholder="Your Surname", value="Tarantino")
+
+										div
+											label(for="name") Nickname
+											input#name(type="text", placeholder="Invent Login", value="Iceman")
+
+										div
+											label(for="name") E-mail
+											input#name.error(type="text", placeholder="E-mail address", value="tarantino@gmail.com")
+											span.error That email address is already in use.
+
+										div
+											label(for="name") Password
+											input#name.error(type="password", placeholder="Enter password")
+											span.error You have not specified a password
+
+										div
+											label(for="name") Phone
+											input#name.error(type="text", placeholder="Your phone number", value="54320654386784306")
+											span.error Invalid phone number
+												=" "
+												| format
+
+										a.btn.btn__profile.expand registration
+
+										span.gray.agree
+											| By clicking "Register", you agree to the terms of service ( user agreement )
+
+									form.b-login
+										div
+											label(for="name") Nickname or E-mail
+											input#name(type="text", placeholder="Enter login or E-mail", value="tarantino@gmail.com")
+
+										div
+											label(for="name") Password
+											input#name.error(type="password", placeholder="Enter password", value="54320654386784306")
+											span.error Password doesn’t match.
+												br
+												| You forget password?
+
+										a.btn.btn__profile.expand login
+
+										a(href="kaspersky-restore-password.html").gray.agree Restore password
+		// /modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer

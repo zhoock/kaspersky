@@ -1,0 +1,57 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - тест предупреждение"
+	include ../includes/_head
+
+	body
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-12.small-centered.medium-8.large-6.columns
+							.b-test-attention
+
+								.row
+									.small-12.columns
+										hgroup
+											h1 Fasten your seatbelt!
+											h2 And keep in mind: you have only one chance to pass the test.
+
+										.text-center
+											a.btn.btn__profile  let's go!
+
+		// /modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer

@@ -1,0 +1,101 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - настройки профайла"
+	include ../includes/_head
+
+	body(data-page="registration")
+		- var authorizedUser = true
+		- var linkActive = "active"
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-11.small-centered.medium-8.large-6.columns
+							.b-settings.js-settings
+								.row
+									.small-4.columns
+
+										.load-userpic
+											a(href="#")
+												img.userpic(src="/css/blocks/b-profile/user-default.svg")
+
+											p Upload your userpic
+												span (no more than 1MB)
+
+									.small-8.columns
+										.b-enter__forms.js-wrapper-forms
+											form.b-registration
+
+												div.not-border
+													label(for="name") First name
+													input#name(type="text", placeholder="Your first name", value="Quentin", disabled)
+
+												div.not-border
+													label(for="name") Family name
+													input#name(type="text", placeholder="Your Surname", value="Tarantino", disabled)
+
+												div.not-border
+													label(for="name") Nickname
+													input#name(type="text", placeholder="Invent Login", value="Iceman", disabled)
+
+												div
+													label(for="name") E-mail
+													input#name(type="text", placeholder="E-mail address", autocomplete="off", value="tarantino@gmail.com", data-inputmask="'alias': 'email'", data-validate="You have not specified a e-mail")
+
+												div
+													label(for="name") Phone number
+													input#name(type="text", placeholder="Your phone number", value="+1 44 854 37 44 98", data-validate="You have not specified a phone number")
+
+												a.btn.btn__profile.btn--small.js_btn_submit save
+												a.btn.btn--small.btn__cansel cancel
+
+												.text-right
+													a.gray.js-change-password Change Password
+
+												div.b-change-password
+
+													div
+														label(for="name") Password
+														input#name(type="password",name="pass" placeholder="Enter password", value="1234567890", data-validate="You have not specified a password",data-wrongpass="Your Password must be more 6 characters and must contain at least 1 letter and 1 number")
+
+													div
+														label(for="name") Сonfirm the password
+														input#name(type="password",name="pass2",pattern=".{3,}",title="123", placeholder="Сonfirm the password", value="1234567890",data-validate="You have not specified a password confirmation", data-confirmvalidate="Password does not match")
+
+													a.btn.btn__profile.btn--small.js_btn_submit save
+													a.btn.btn--small.btn__cansel cancel
+		// /modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer

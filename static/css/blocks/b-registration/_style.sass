@@ -1,0 +1,174 @@
+// Registration
+//
+//
+
+.b-enter
+    color: white
+    width: 360px
+    margin: auto
+
+    .btn
+        +rhythm-margins(4, 1)
+
+    &__nav
+        +pie-clearfix
+
+        li
+            float: left
+            width: 180px
+
+            &.current
+                a
+                    border-bottom: 2px solid white
+                    color: white
+
+            a
+                +adjust-font-size-to(1.4rem)
+                text-transform: uppercase
+                color: $profile-border-color
+                border-bottom: 1px solid $profile-border-color
+                display: inline-block
+                width: 100%
+                text-align: center
+                padding-bottom: 16px
+                cursor: pointer
+
+.b-social
+    text-align: center
+    position: relative
+
+    span
+        position: relative
+
+        &::before, &::after
+            content: ""
+            position: absolute
+            height: 15px
+            border-top: 1px solid $profile-border-color
+            top: 9px
+            width: 165px
+
+        &::before
+            margin-right: 10px
+            right: 100%
+
+        &::after
+            margin-left: 10px
+            left: 100%
+
+
+    ul
+        margin-bottom: 0
+
+        li
+            display: inline-block
+            text-align: center
+            margin-right: 0 !important
+            float: none
+
+            a
+                color: white
+                +adjust-font-size-to(3rem)
+                padding: 18px 8px 0
+                display: inline-block
+                cursor: pointer
+
+                &::after
+                    content: ""
+                    width: 100%
+                    height: 0
+                    visibility: hidden
+                    display: inline-block
+
+                &:hover
+                    color: mix($link, white, 50%)
+
+.b-registration, .b-login, .b-restore-password
+
+    div
+        position: relative
+        +margin-leader(1)
+
+        &.not-border
+            input[type="text"], input[type="password"]
+                border-bottom: none
+
+        label
+            +adjust-font-size-to(1.2rem)
+            color: #858585
+            display: block
+
+        input[type="text"], input[type="password"], input[attr="disabled"]
+            +input-placeholder
+                color: #2d2d2d
+            width: 100%
+            border: none
+            border-bottom: 2px solid white
+            background: none
+            color: white
+            +adjust-font-size-to(1.8rem)
+            +padding-trailer(.5)
+            +transition(all 0.35s ease-out 0s)
+
+            &.error
+                border-bottom-color: $error-color
+                color: $error-color
+
+        span
+            color: $error-color
+            display: block
+            +margin-leader(.2)
+
+    .agree
+        padding: 0 12px
+        display: block
+        text-align: center
+
+    h4
+        text-transform: uppercase
+        text-align: center
+        +trailer(2)
+
+
+.b-confirmed
+    color: white
+    +adjust-font-size-to(1.8rem)
+
+    img
+        float: left
+    p
+        +trailer(2.5)
+
+    p, .btn
+        margin-left: 76px
+
+.b-login
+    span
+        text-align: center
+
+.preloader
+    background: rgba(0,0,0,0.4)
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+
+    .spinner
+        background: url(/css/blocks/b-test/preloader.png)
+        width: 152px
+        height: 152px
+        position: absolute
+        left: 50%
+        top: 50%
+        margin: -76px 0 0 -76px
+        +animation(spinner 1100ms linear infinite)
+
++keyframes(spinner)
+    100%
+        +rotate(360deg)
+
+
+.capth_images
+    +trailer(1)
+      

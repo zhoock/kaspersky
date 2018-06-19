@@ -1,0 +1,103 @@
+// Scoreboard
+//
+//
+
+.b-scoreboard
+    position: relative
+
+    .pattern.top
+        top: -42px
+
+    h1
+        color: white
+        +adjust-font-size-to(2.6rem)
+        text-align: center
+        text-transform: uppercase
+        +trailer(2)
+
+    &__table
+        border: 2px solid #ffcb65
+        width: 100%
+        color: white
+        +adjust-font-size-to(1.3rem)
+        text-transform: uppercase
+        table-layout: fixed
+        border-collapse: collapse
+
+        +breakpoint(1024)
+            border: none
+
+        th
+            color: #858585
+            text-transform: none
+            padding: 6px 0
+
+        tr
+            cursor: default
+
+            &:nth-of-type(50),
+            &:nth-of-type(55),
+            &:nth-of-type(65),
+            &:nth-of-type(109),
+            &:nth-of-type(136),
+            &:nth-of-type(150)
+                border-bottom: 1px solid $profile-border-color
+
+            td
+                position: relative
+                text-align: center
+
+                img
+                    width: 30px
+                    vertical-align: -10px
+
+.panel
+    height: 38px
+    margin-bottom: 12px
+    +perspective(300px)
+    line-height: 38px
+
+    div
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+    .fl &
+
+        color: #1c1c1c
+
+    .front
+        height: inherit
+        position: absolute
+        top: 0
+        z-index: 900
+        width: 100%
+        +transform(rotateX(0deg) rotateY(0deg))
+        +transition(all .4s ease-in-out)
+        +transform-style(preserve-3d)
+        +backface-visibility(hidden)
+
+        .flip &
+            z-index: 900
+            +rotateX(180deg)
+
+    .back
+        height: inherit
+        position: absolute
+        top: 0
+        z-index: 1000
+        width: 100%
+        +rotateX(-180deg)
+        +transition(all .4s ease-in-out)
+        +transform-style(preserve-3d)
+        +backface-visibility(hidden)
+        background-color: $yellow
+
+        .fl &
+            z-index: 1000
+            +transform(rotateX(0deg) rotateY(0deg))
+
+
+
+
+

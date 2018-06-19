@@ -1,0 +1,128 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - регистрация"
+	include ../includes/_head
+
+	body(data-page="registration")
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-12.columns
+							.b-enter
+								ul.b-enter__nav.js-enter__nav
+									li: a(data-toggle=".b-registration") sign up
+									li: a(data-toggle=".b-login") sign in
+
+								.b-social
+									.gray Via social net account
+									ul
+										li: a(href="#").fb
+											i.icon-facebook
+										li: a(href="#").tw
+											i.icon-twitter
+										li: a(href="#").google
+											i.icon-googleplus
+
+									span.gray or
+
+								.b-enter__forms.js-wrapper-forms
+									form.b-registration
+
+										div
+											label(for="name_1") First name
+											input#name_1(type="text", placeholder="Your first name", data-validate="Please, fill in your name")
+
+										div
+											label(for="name_2") Family name
+											input#name_2(type="text", placeholder="Your Surname", data-validate="Please, fill in your name")
+
+										div
+											label(for="nick") Nickname
+											input#nick(type="text", placeholder="Invent Login", data-validate="Please, fill in your name")
+
+										div
+											label(for="email") E-mail
+											input#email(type="text", placeholder="E-mail address", data-inputmask="'alias': 'email'", data-validate="Please, fill in your email address")
+
+										div
+											label(for="pass") Password
+											input#pass(type="password", placeholder="Enter password", data-validate="Please, fill in your email address ")
+
+										div
+											label(for="pass2") Confirm your password
+											input(id="pass2", name="pass2", type="password", placeholder="Enter password", data-validate="Please, confirm in your password" data-confirmvalidate="Password does not match")
+
+										div
+											label(for="phone") Phone number
+											input#phone(type="text", placeholder="Your phone number", data-inputmask="'mask': 'ksphone'", data-validate="Please, fill in your email address ")
+
+										div
+
+											label(for="captcha") Write the symbols you see
+											.capth_images
+												img(src="/images/7.gif")
+												img(src="/images/7.gif")
+												img(src="/images/7.gif")
+												img(src="/images/7.gif")
+												img(src="/images/7.gif")
+											input#captcha(type="text", placeholder="Write the symbols", data-validate="Incorrect symbols")
+
+										a.btn.btn__profile.js_btn_submit.expand sign up
+
+										span.gray.agree
+											|By clicking "Register", you agree to the terms of service
+											br
+											| ( user agreement )
+
+
+
+									form.b-login
+
+										div
+											label(for="name") E-mail
+											input#name(type="text", placeholder="Enter login or E-mail", autocomplete="off", data-validate="You have not specified a email")
+
+										div
+											label(for="name") Password
+											input#name(type="text", placeholder="Enter password", data-validate="Invalid password")
+
+										a.btn.btn__profile.js_btn_submit.expand sign in
+
+										a(href="kaspersky-restore-password.html").gray.agree Restore password
+		// /modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer
+

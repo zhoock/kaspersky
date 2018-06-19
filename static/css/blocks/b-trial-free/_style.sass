@@ -1,0 +1,54 @@
+// Trial free
+//
+//
+
+.b-trial-free
+    color: white
+    text-transform: uppercase
+
+    h1
+        +adjust-font-size-to(2.4rem, 2.5)
+        +trailer(4)
+
+        span
+            +adjust-font-size-to(2rem)
+            color: #a9a9a9
+            display: block
+
+    h2
+        +adjust-font-size-to(1.5rem)
+        +trailer(1)
+
+    .b-list-platforms
+        +trailer(4)
+
+        li
+            display: inline-block
+            margin-right: 26px
+
+            a
+                +adjust-font-size-to(4rem)
+                +transition(color .25s)
+                color: #1ef2b7
+
+                &.active
+                    color: white
+
+                &:hover
+                    color: mix(#1ef2b7, $link, 50%)
+    .btn
+        padding-left: 10%
+        position: relative
+        font-size: 1.8vh
+
+    .icon-download
+        position: absolute
+        left: 3%
+        top: 50%
+        +translateY(-50%)
+        +adjust-font-size-to(2rem, 0)
+
+    .insruction
+        +adjust-font-size-to(1.2rem, 1.3)
+        text-transform: none
+        +trailer(0)

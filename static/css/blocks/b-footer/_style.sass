@@ -1,0 +1,76 @@
+// Footer
+//
+//
+
+//+sticky-footer(72px, ".b-container", ".b-container_footer", "footer")
+
+footer
+    height: 72px
+    line-height: 72px
+    background-color: white
+    z-index: 999
+
+    .b-container
+        background-color: inherit
+
+    +breakpoint(768px)
+        height: auto
+        line-height: 42px
+        +padding-trailer(2)
+
+    .b-copyright
+        padding-left: 45px
+
+        +breakpoint(1024)
+            padding-left: 0
+
+    .b-share
+        text-align: center
+
+        &__text
+            +adjust-font-size-to(1.8rem)
+            margin-right: 12px
+
+        &__bubble
+            +adjust-font-size-to(1.2rem)
+            background: #f4f4f4
+            padding: 4px
+            position: relative
+
+            &::before
+                content: ""
+                position: absolute
+                left: -6px
+                top: 5px
+                border:
+                    top: 6px solid transparent
+                    right: 6px solid #f4f4f4
+                    bottom: 6px solid transparent
+
+    nav
+
+        +breakpoint(1024)
+            margin-right: 0
+
+        ul
+            +pie-clearfix
+            margin-bottom: 0
+
+            li
+                float: left
+                margin-right: 6%
+
+                +breakpoint(768px)
+                    float: none
+                    text-align: center
+                    margin-right: 0
+
+                a
+                    text-transform: capitalize
+
+                    &:hover
+                        text-decoration: underline
+
+
+
+

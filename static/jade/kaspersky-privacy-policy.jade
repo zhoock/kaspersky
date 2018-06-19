@@ -1,0 +1,118 @@
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - политика безопасности"
+	include ../includes/_head
+
+	body
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+				.b-container
+					.row
+						.small-11.small-centered.medium-10.large-8.columns
+							.b-privacy-policy
+								.row
+									.small-12.columns
+										.text-center
+											h1 Privacy policy
+
+										.b-privacy-policy__text
+											p The contest is held from Jule 1 to August 20, 2015. Organizers of the contest - the company Kaspersky Lab and Scuderia Ferrari. The main prize for the winner will be fifty tickets to the Formula 1 race in Belgian, August 23, 2015.
+											p Participants ranked in the top ten will also receive prizes, which will be announced later.
+
+											p Last updated: 15th of May 2014
+
+											h2.blockquote 1. What does personal data mean?
+
+											p The competition participants will have to answer the five questions posed based on the next release of the site kasperskymotorsports.com, and guess the starting and finishing positions of pilots of the team Scuderia Ferari, using fuels Total. This prediction on the outcome of the next stage will be considered only if the participant correctly answered all five questions of competition.
+
+											h2.blockquote 2. How do we collect and process your personal data?
+
+											ul
+												li
+													span.blockquote.blockquote--normal a. General principle
+													br
+													| In general, you can visit and read most parts of our website contents without providing any personal data.
+
+												li
+													span.blockquote.blockquote--normal b. Statistical data
+													br
+													| For the process of retrieving your requested information from our websites, our servers store certain data needed for service delivery and/or for statistical or security purposes in anonymised or pseudomised form. In this context general information is recorded, such as your domain name or browser type. These data do not enable us to draw conclusions regarding your identity; they are always collected under a pseudonym. These anonymised or pseudomised data are deleted promptly after their statistical evaluation.
+
+												li
+													span.blockquote.blockquote--normal c. Web services
+													br
+													| For the process of retrieving your requested information from our websites, our servers store certain data needed for service delivery and/or for statistical or security purposes in anonymised or pseudomised form. In this context general information is recorded, such as your domain name or browser type. These data do not enable us to draw conclusions regarding your identity; they are always collected under a pseudonym. These anonymised or pseudomised data are deleted promptly after their statistical evaluation.
+
+												li
+													span.blockquote.blockquote--normal d. Premium Content
+													br
+													| For the process of retrieving your requested information from our websites, our servers store certain data needed for service delivery and/or for statistical or security purposes in anonymised or pseudomised form. In this context general information is recorded, such as your domain name or browser type. These data do not enable us to draw conclusions regarding your identity; they are always collected under a pseudonym. These anonymised or pseudomised data are deleted promptly after their statistical evaluation.
+
+												li
+													span.blockquote.blockquote--normal e. Free trials
+													br
+													| For the process of retrieving your requested information from our websites, our servers store certain data needed for service delivery and/or for statistical or security purposes in anonymised or pseudomised form. In this context general information is recorded, such as your domain name or browser type. These data do not enable us to draw conclusions regarding your identity; they are always collected under a pseudonym. These anonymised or pseudomised data are deleted promptly after their statistical evaluation.
+
+												li
+													span.blockquote.blockquote--normal f. Newsletters, Free Product Updates and Special Offers
+													br
+													| For the process of retrieving your requested information from our websites, our servers store certain data needed for service delivery and/or for statistical or security purposes in anonymised or pseudomised form. In this context general information is recorded, such as your domain name or browser type. These data do not enable us to draw conclusions regarding your identity; they are always collected under a pseudonym. These anonymised or pseudomised data are deleted promptly after their statistical evaluation.
+
+												li
+													span.blockquote.blockquote--normal g. Contact Forms
+													br
+													| For the process of retrieving your requested information from our websites, our servers store certain data needed for service delivery and/or for statistical or security purposes in anonymised or pseudomised form. In this context general information is recorded, such as your domain name or browser type. These data do not enable us to draw conclusions regarding your identity; they are always collected under a pseudonym. These anonymised or pseudomised data are deleted promptly after their statistical evaluation.
+
+											h2.blockquote 3. Kaspersky’s principles regarding data protection
+
+											p The competition participants will have to answer the five questions posed based on the next release of the site kasperskymotorsports.com, and guess the starting and finishing positions of pilots of the team Scuderia Ferari, using fuels Total. This prediction on the outcome of the next stage will be considered only if the participant correctly answered all five questions of competition.
+
+											p The competition participants will have to answer the five questions posed based on the next release of the site kasperskymotorsports.com, and guess the starting and finishing positions of pilots of the team Scuderia Ferari, using fuels Total. This prediction on the outcome of the next stage will be considered only if the participant correctly answered all five questions of competition.
+
+											h2.blockquote 4. Do we use cookies?
+
+											p We use different types of “cookies” (small text files that are placed on your device):
+
+											ul.normal
+												li User input cookies
+												li Authentication cookies
+												li Third party advertising cookies
+												li First party analytics cookies
+												li Social plug-in tracking cookies
+
+											h2.blockquote 7. How do we protect your personal data?
+
+											p The competition participants will have to answer the five questions posed based on the next release of the site kasperskymotorsports.com, and guess the starting and finishing positions of pilots of the team Scuderia Ferari, using fuels Total. This prediction on the outcome of the next stage will be considered only if the participant correctly answered all five questions of competition.
+				// modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+			//	social-networks
+			include ../includes/_social-networks
+			//	/social-networks
+
+			.b-container_footer
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer
+

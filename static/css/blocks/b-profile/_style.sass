@@ -1,0 +1,207 @@
+// Profile
+//
+//
+
+.b-user-profile
+    border-left: 1px solid $profile-border-color
+    border-right: 1px solid $profile-border-color
+    color: white
+    +pie-clearfix
+    padding: 0 30px
+
+    img.userpic
+        +rhythm-margins(1, 1)
+
+    hgroup
+        margin-top: 32px
+
+        h1
+            color: $profile-heading-color
+            +adjust-font-size-to(3.6rem)
+            +trailer(.5)
+
+        h2
+            color: white
+            +adjust-font-size-to(1.8rem)
+            +trailer(1)
+
+    .settings
+        color: $profile-signature-color
+        font-size: 1.6rem
+        margin-bottom: 30px
+        display: inline-block
+
+        i
+            margin-right: 4px
+            position: relative
+            bottom: -1px
+
+    &__end-race, .b-share
+        p
+            font-size: 1.3rem
+            margin-bottom: 11px
+
+    .b-share
+        +margin-leader(3)
+
+    .b-current-result,
+    .b-previous-results
+        h2
+            color: white
+            border-top: 1px solid $profile-border-color
+            +adjust-font-size-to(2rem)
+            padding-top: 30px
+            +trailer(1)
+
+        span
+            color: $profile-heading-color
+
+        ul
+            li
+                min-width: 62px
+
+                &:not(:last-child)
+                    margin-right: 42px !important
+
+                    +breakpoint(1024)
+                        margin-right: 30px !important
+
+                span
+                    &.num
+                        font-size: 2.4rem
+                        color: white
+
+    .b-previous-results
+        border-top: 1px solid $profile-border-color
+        +padding-leader(1)
+
+        ul
+            li
+                width: 74px
+                white-space: nowrap
+
+                &:not(:last-child)
+                    margin-right: 70px !important
+
+                &:nth-of-type(2)
+                    width: 124px
+
+                span
+                    &.num
+                        font-size: 1.8rem
+
+    ul
+        +pie-clearfix
+
+        li
+            float: left
+
+            &:not(:last-child)
+                margin-right: 30px
+
+            span
+                display: block
+
+                &.num
+                    +adjust-font-size-to(3.6rem)
+                    color: $profile-heading-color
+
+                &.txt
+                    +adjust-font-size-to(1.2rem)
+                    color: $profile-signature-color
+
+    .remind
+        border-top: 1px solid $profile-border-color
+        text-align: center
+        font-size: 1.8rem
+        color: white
+        padding: 140px 0
+        margin-top: 20px
+        margin-bottom: 20px
+
+        span
+            color: $profile-heading-color
+
+.b-settings
+    .load-userpic
+        text-align: center
+
+        a
+            display: inline-block
+
+            //span
+            //    width: 100px
+            //    height: 100px
+            //    background: url(/css/blocks/b-profile/user-default.svg) 50% 50%
+            //    background-size: cover
+            //    +transition(all .25s)
+            //    +trailer(.5)
+            //    text-align: center
+            //
+            //    &:hover
+            //        +opacity(.7)
+
+
+        img
+            width: 100px
+            height: 100px
+            +trailer(.5)
+
+            &:hover
+                +opacity(.7)
+
+        p
+            color: #858585
+
+        span
+            color: #bfbfbf
+            display: block
+
+    a.gray
+        display: block
+        +rhythm-margins(1, 1)
+
+    .b-change-password
+        display: none
+
+    .btn
+        +rhythm-margins(2.5, 1)
+
+.social-icon
+    position: absolute
+    left: 20px
+    bottom: 130px
+    z-index: 999
+    margin-bottom: 0
+
+    li
+        display: inline-block
+        margin-right: 3px
+
+        +breakpoint(1024)
+            display: block
+            margin-bottom: 3px
+
+        a:link,
+        a:visited
+            width: 36px
+            height: 36px
+            display: inline-block
+            text-align: center
+
+            &.fb
+                background-color: #4d71ad
+
+            &.tw
+                background-color: #42aae6
+
+            &.google
+                background-color: #da3414
+
+            i
+                color: white
+                font-size: 2.2rem
+                line-height: 36px
+
+.userpic
+    border-radius: 50%

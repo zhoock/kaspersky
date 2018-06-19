@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1600px"
+	 height="1000.001px" viewBox="0 0 1600 1000.001" enable-background="new 0 0 1600 1000.001" xml:space="preserve">
+<g id="back_colours" display="none">
+	
+		<radialGradient id="SVGID_1_" cx="798.6865" cy="471.0723" r="672.9954" gradientTransform="matrix(0.9638 0 0 1.0761 29.7767 -7.2447)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#4C4C4C"/>
+		<stop  offset="0.3683" style="stop-color:#2B2B2B"/>
+		<stop  offset="0.7732" style="stop-color:#0C0C0C"/>
+		<stop  offset="1" style="stop-color:#000000"/>
+	</radialGradient>
+	<rect x="-0.854" y="-0.647" display="inline" fill="url(#SVGID_1_)" width="1600.808" height="1000.647"/>
+	<rect x="-0.729" y="-0.771" display="inline" opacity="0.7" fill="#222C39" width="1600.684" height="1000.771"/>
+</g>
+<g id="_x31_">
+	<g id="shadow" opacity="0.3">
+		<polygon fill="#000006" points="249,207 137,355 0,291 0,0 113,0 		"/>
+		<polygon fill="#111113" points="1600,896.073 1500.54,702.581 1600,393.667 		"/>
+		<polygon fill="#111113" points="1371.173,758.079 1296.55,822.575 1099.666,879.308 827.666,596.333 1248.553,683.083 		"/>
+		<path fill="#DADBD8" d="M800,1000"/>
+		<polyline fill="#1A1A1A" points="1423.28,999.999 1600,896.073 1599.683,999.995 		"/>
+		<polygon fill="#111113" points="1600,278.986 1526.039,260.104 1353.548,0 1600,0 		"/>
+		<polygon fill="#161616" points="1142.346,271.117 1248.553,683.083 827.666,596.333 532.332,320.333 928.978,278.986 
+			1000,219.498 1167.558,243.604 		"/>
+		<polygon fill="#000006" points="1167.558,243.604 1208.133,526.298 1000,219.498 1181.057,113.111 		"/>
+		<polygon fill="#000006" points="1600,278.986 1600,393.667 1427.389,347.446 1526.039,260.104 		"/>
+		<polygon fill="#000006" points="380.097,581.087 753.666,653.667 1045.276,855.374 800,1000 0,887.001 233.104,537.589 		"/>
+		<polygon fill="#161616" points="1167.558,243.604 1181.057,113.111 1000,219.498 753.666,0 1353.548,0 		"/>
+		<polygon fill="#111113" points="1000,219.498 928.978,278.986 532.332,320.333 479,0 753.666,0 		"/>
+		<polygon fill="#161616" points="753.666,653.667 380.097,581.087 233.104,537.589 222.25,500.001 364,527.001 		"/>
+		<polygon fill="#1A1A1A" points="382.334,393.667 358.332,495.667 532.332,320.333 827.666,596.333 1099.666,879.308 
+			1045.276,855.374 753.666,653.667 364,527.001 0,457.667 137,355 249,207 329,259.667 		"/>
+		<polygon fill="#232323" points="382.334,393.667 329,259.667 249,207 479,0 		"/>
+		<polygon fill="#232323" points="1500.54,702.581 1371.173,758.079 1248.553,683.083 1600,393.667 		"/>
+		<path fill="#EFEFEA" d="M800,1000"/>
+		<polyline fill="#1A1A1A" points="1097.399,1000.001 1099.666,879.308 1296.55,822.575 1423.28,999.999 		"/>
+		<polygon fill="#161616" points="249,207 113,0 479,0 		"/>
+		<polyline fill="#161616" points="1423.28,999.999 1296.55,822.575 1371.173,758.079 1500.54,702.581 1600,896.073 		"/>
+		<path fill="#E6E6E3" d="M800,1000"/>
+		<polygon fill="#1A1A1A" points="430.667,196.833 479,0 928.978,278.986 		"/>
+		<polygon fill="#111113" points="1248.553,683.083 1142.346,271.117 1427.389,347.446 1600,393.667 		"/>
+		<polygon fill="#111113" points="0,457.667 0,291 137,355 		"/>
+		<polygon fill="#232323" points="1142.346,271.117 1167.558,243.604 1353.548,0 1526.039,260.104 1427.389,347.446 		"/>
+		<polygon fill="#161616" points="358.332,495.667 430.667,196.833 514.06,210.582 532.332,320.333 		"/>
+		<polygon fill="#1C1C1C" points="0,887.001 0,457.667 222.25,500.001 233.104,537.589 		"/>
+		<polyline fill="#1A1A1A" points="0,1000 0,887.001 800,1000 		"/>
+		<polyline fill="#111113" points="800,1000 1045.276,855.374 1099.666,879.308 1097.399,1000.001 		"/>
+	</g>
+</g>
+</svg>

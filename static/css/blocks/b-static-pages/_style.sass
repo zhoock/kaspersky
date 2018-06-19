@@ -1,0 +1,54 @@
+// Static pages
+//
+//
+
+.b-contest-rules,
+.b-legal-statement,
+.b-privacy-policy,
+.b-kaspersky-contacts
+    color: white
+
+    h1
+        +adjust-font-size-to(2.6rem)
+        +trailer(2)
+        text-transform: uppercase
+        font-weight: 800
+
+    h2
+        +adjust-font-size-to(1.5rem)
+        +rhythm-margins(3, 1)
+
+    ul
+        margin-left: 16px
+
+        &.normal
+            li
+                +trailer(0)
+
+        li
+            +trailer(3)
+
+    &__text
+        border: 2px solid $yellow
+        padding: 42px 56px
+        +trailer(1)
+
+        p, span, li
+            color: #f2f3ee
+            +adjust-font-size-to(1.5rem)
+
+    .blockquote
+        color: $yellow
+        text-transform: uppercase
+
+        &--normal
+            text-transform: none
+
+
+
+.big-link
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    max-width: 120%
+    display: inline-block

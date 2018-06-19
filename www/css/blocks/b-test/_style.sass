@@ -1,0 +1,259 @@
+// Test
+//
+//
+
+
+.b-test, .b-test-attention
+    color: white
+    border: 3px solid $yellow
+    padding: 10%
+    position: relative
+
+    h1
+        +adjust-font-size-to(2.4rem)
+        +trailer(2)
+        text-transform: uppercase
+
+    &__question
+        +adjust-font-size-to(1.8rem)
+        +trailer(4)
+
+    &__current-time
+        +trailer(1)
+
+        .name
+            +adjust-font-size-to(1.4rem)
+
+        .counter
+            +adjust-font-size-to(3.6rem)
+            color: $yellow
+
+    &__current-points,
+    &__current-position,
+    &__current-questions,
+    &__error
+        +trailer(1)
+
+        .name
+            color: #858585
+            +adjust-font-size-to(1.4rem)
+
+        .num
+            +adjust-font-size-to(2.4rem)
+
+    &__track
+        +margin-leader(2)
+        text-align: center
+
+        figcaption
+            +rhythm-padding(1)
+
+.checkbox, .radio
+    cursor: pointer
+    position: relative
+    +transition(all 0.75s ease-out 0s)
+
+input[type="checkbox"],
+input[type="radio"]
+    height: auto
+    width: auto
+    left: -9999px
+    position: absolute
+    visibility: hidden
+
+input[type="radio"] + label
+    cursor: pointer
+    display: block
+    margin-top: -4px
+    +trailer(2)
+    position: relative
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    +adjust-font-size-to(1.8rem)
+
+    &.agreement
+        +adjust-font-size-to(1.5rem)
+        +trailer(1.8)
+
+        &::before
+            width: 16px
+            height: 16px
+            margin-right: 12px
+            vertical-align: text-top
+            background: transparent url(/static/css/blocks/b-test/radio-unchecked.png) no-repeat
+
+        &::after
+            font-size: 0
+
+    &::after
+        content: ""
+        font-size: 1.8rem
+        margin-right: 20px
+        color: white
+        position: absolute
+        left: 10px
+        top: 3px
+
+    &:nth-of-type(1)::after
+        content: "A"
+
+    &:nth-of-type(2)::after
+        content: "B"
+
+    &:nth-of-type(3)::after
+        content: "C"
+
+    &:nth-of-type(4)::after
+        content: "D"
+
+    &::before
+        content: ""
+        width: 32px
+        height: 32px
+        display: inline-block
+        vertical-align: middle
+        margin-right: 20px
+        background: #5c5c5c
+
+input[type="radio"]:checked + label
+
+    &::before
+        background: $yellow
+
+    &::after
+        color: #1c1c1c
+
+    &.agreement
+        &::before
+            background: transparent url(/static/css/blocks/b-test/radio-checked.png) no-repeat
+
+.b-test-attention
+
+    hgroup
+        text-align: center
+
+        h1
+            +adjust-font-size-to(3rem)
+            +rhythm-margins(3.5, .5)
+
+        h2
+            +adjust-font-size-to(1.6rem)
+            +trailer(3)
+
+.b-test-rules
+    color: white
+
+    h1
+        +adjust-font-size-to(2.4rem)
+        +trailer(1)
+        text-transform: uppercase
+
+    &__text
+        border: 2px solid white
+        padding: 42px 56px
+        height: 406px
+        +trailer(1)
+
+        p
+            +adjust-font-size-to(1.2rem)
+
+.b-congratulation
+    color: white
+    border: 3px solid $yellow
+    padding: 60px
+    position: relative
+
+    &__prizes
+        text-align: center
+
+        .icon-prizes
+            color: $yellow
+            display: block
+            +adjust-font-size-to(8rem)
+            +rhythm-margins(4, 1.5)
+
+        .icon-flags
+            height: 120px
+            +rhythm-margins(4, 1.5)
+
+        h1
+            +adjust-font-size-to(2.4rem)
+            +trailer(2)
+            text-transform: uppercase
+
+        p
+            +adjust-font-size-to(1.5rem)
+
+.pattern.top
+    top: 0
+
+.info
+    text-align: center
+    color: #858585
+    +margin-leader(.5)
+
+.pattern
+    background: url(/static/images/finishline_puttern_yellow.svg) 0 0 repeat-x
+    background-size: 56px 42px
+    width: 100%
+    height: 42px
+    position: absolute
+    left: 0
+    bottom: 0
+    color: $yellow
+
+    &--black
+        background: url(/static/images/finishline_puttern_black.svg) 0 0 repeat-x
+
+    &--white
+        background: url(/static/images/finishline_puttern_white.svg) 0 0 repeat-x
+
+.green
+    color: #749b49
+
+.red
+    color: #b20b13
+
+.b-test-attention
+    border: none
+
+.b-test-attention-loading
+    position: absolute
+    left: 50%
+    top: 50%
+    +translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    text-align: center
+    .step
+        font-size: 80px
+        color: white
+        +transform(translate(-50%, -50%))
+        position: absolute
+        top: 50%
+        left: 50%
+        &.step_go
+            +animation(stepScale 1000ms linear 1 1.5s)
+            opacity: 0
+        &.step_1
+            +animation(stepScale 1000ms linear 1s)
+            opacity: 0
+        &.step_2
+            +animation(stepScale 1000ms linear 1 0.5s)
+            opacity: 0
+        &.step_3
+            +animation(stepScale 1000ms linear 1)
+            opacity: 0
+
++keyframes(stepScale)
+    0%
+        opacity: 1
+    100%
+        font-size: 600px
+        opacity: 0
+
+

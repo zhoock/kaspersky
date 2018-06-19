@@ -1,0 +1,120 @@
+mixin end-race(num, txt)
+	li
+		span.num= num
+		span.txt= txt
+
+mixin results(num, txt)
+	li
+		span.txt= txt
+		span.num= num
+
+doctype html
+html(lang="ru")
+	- var title = "kaspersky - профайл"
+	include ../includes/_head
+
+	body
+		- var authorizedUser = true
+		- var linkActive = "active"
+		include ../includes/_header
+
+		// modal
+		i.icon-close.js-trigger-modal
+		.b-modal
+			.b-modal__overlay.open
+
+				.b-container
+					.row
+						.small-11.small-centered.medium-10.large-8.columns
+							.b-user-profile
+								.small-12.medium-8.columns
+									.row
+										.small-3.columns
+											img.userpic(src="/css/blocks/b-profile/kramina_userpic.jpg")
+										.small-9.columns
+											hgroup
+												h1 Sébastien Bourdais
+												h2 Challenger (28-position)
+											a(href="#").settings
+												i.icon-cog
+												=" "
+												| Settings
+									.row
+										.small-12.columns
+											.b-current-result
+												h2 Current result
+													=" "
+													span (Abu Dhabi Grand Prix)
+												ul
+													+results("28", "Position")
+													+results("1.09.285", "Time")
+													+results("3852", "Points")
+													+results("20/20", "Answers")
+
+								.small-12.medium-4.columns
+									.b-user-profile__end-race
+										p Results to be announced in:
+										ul
+											+end-race("04", "Days")
+											+end-race("23", "Hours")
+											+end-race("18", "Min")
+											+end-race("56", "Sec")
+
+									.row
+										.small-12.columns
+											.b-share.js-trigger-share
+												p Let them envy! Sharing your result will add extra points, go for it.
+												a.btn.btn__profile.expand share my results
+
+												.b-social.js-social
+
+													ul
+														li: a(class="fb",data-shareTitle="Мои результаты заезда",data-shareImage="http://yastatic.net/morda-logo/i/logo.png",data-shareText="Current result (Abu Dhabi Grand Prix): position - 28, time - 1.09.285",data-shareLink="http://moto.kaspersky.ru").fb
+															i.icon-facebook
+														li: a(class="tw",data-shareTitle="Мои результаты заезда",data-shareImage="http://yastatic.net/morda-logo/i/logo.png",data-shareText="Current result (Abu Dhabi Grand Prix): position - 28, time - 1.09.285",data-shareLink="http://moto.kaspersky.ru").tw
+															i.icon-twitter
+														li: a(class="google",data-shareTitle="Мои результаты заезда",data-shareImage="http://yastatic.net/morda-logo/i/logo.png",data-shareText="Current result (Abu Dhabi Grand Prix): position - 28, time - 1.09.285",data-shareLink="http://moto.kaspersky.ru").google
+															i.icon-googleplus
+
+								.small-12.columns
+									.remind Don’t miss the next round!
+										=" "
+										span Get a reminder.
+		// /modal
+
+		// container
+		.b-container
+			section.b-content(role="main")
+
+				.b-menu-section.hide-for-large-up
+
+					// Menu
+					nav
+						ul.b-menu
+							each val in ["tribune", "test", "scoreboard", "prizes", "contest-rules"]
+								li
+									a(href="#")
+										i(class="icon-" + val)
+										=val
+								=" "
+					// /Menu
+
+
+
+				//	social-networks
+				include ../includes/_social-networks
+				//	/social-networks
+
+			.b-container_footer
+
+		// /container
+
+		// footer
+		include ../includes/_footer
+		// /footer
+
+
+
+
+
+
